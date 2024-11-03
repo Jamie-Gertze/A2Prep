@@ -1,10 +1,12 @@
-import { Admin, Resource, ListGuesser } from "react-admin";
-import jsonServerProvider from "ra-data-json-server";
+import { Admin, Resource, ListGuesser, PrevNextButtonClasses } from "react-admin";
+import {PocketBaseProvider} from './ra-pocketbase';
 
-const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
+const pbProvider = PocketBaseProvider("https://organic-rotary-phone-4j9pjg4vpw4cjqv6-8090.app.github.dev/");
 
 const App = () => (
-  <Admin dataProvider={dataProvider}>
+  <Admin 
+  dataProvider={pbProvider.dataProvider}
+  authProvider={pbProvider.authProvider}>
     <Resource name="posts" list={ListGuesser} />
     <Resource name="comments" list={ListGuesser} />
   </Admin>
