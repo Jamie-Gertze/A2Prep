@@ -7,7 +7,11 @@ import { List,
         ImageField,
         FileField,
         ReferenceField,
-        ImageInput
+        ImageInput,
+        Create,
+        SimpleForm,
+        TextInput,
+        
         
     } from 'react-admin';
 
@@ -40,3 +44,4 @@ export const usersShow = () => (
         </SimpleShowLayout>
     </Show>
 )
+

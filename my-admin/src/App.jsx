@@ -3,7 +3,7 @@ import {PocketBaseProvider} from './ra-pocketbase';
 import { usersList,usersShow } from "./users";
 import { StoresList,StoresShow } from "./Stores";
 import { CategoriesList } from "./Categories";
-import { BeerList, BeerShow } from "./Beer";
+import { BeerList, BeerShow, BeerCreate } from "./Beer";
 import { BrandyList, BrandyShow } from "./Brandy";
 
 
@@ -14,10 +14,10 @@ const App = () => (
   dataProvider={pbProvider.dataProvider}
   authProvider={pbProvider.authProvider}
   >
-       <Resource name="users" list={usersList} show={usersShow}  />
+       <Resource name="users" list={usersList} show={usersShow} />
        <Resource name="Stores" list={StoresList} show={StoresShow} />
        <Resource name="Categories" list={CategoriesList} />
-       <Resource name="beer" list={BeerList} show={BeerShow} />
+       <Resource name="beer" list={BeerList} show={BeerShow} create={BeerCreate} />
        <Resource name="Brandy" list={BrandyList} show={BrandyShow} />
 
   </Admin>

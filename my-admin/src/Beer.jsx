@@ -1,5 +1,20 @@
-import { List, Datagrid, TextField, ShowButton, Show, SimpleShowLayout, ReferenceField, ImageField  } from "react-admin";
+import { List, Datagrid, TextField, ShowButton, Show, SimpleShowLayout, ReferenceField, ImageField, Create, TextInput, SimpleForm, ReferenceInput, SelectInput, AutocompleteInput  } from "react-admin";
 import { Stack, Box , Typography} from '@mui/material';
+
+export const BeerCreate = () => (
+    <Create>
+        <SimpleForm>
+            {/* <ImageInput source="avatar" label="Profile Picture" /> */}
+            <TextInput source="Name" label="Name" />
+            <TextInput source="Volume" label="Volume" />
+            <ReferenceInput source="Store_1" reference="Stores" label="Name" filter={{disabled : false}} 
+            sort={{field: "Name"}}
+            >
+            </ReferenceInput>
+            <TextInput source="Store_Price3" label="Store 3 Price" />
+            </SimpleForm>
+    </Create>
+);
 
 export const BeerList = () => (
   <List>
@@ -40,3 +55,4 @@ export const BeerShow = () => (
 </SimpleShowLayout>
 </Show>
 )
+
