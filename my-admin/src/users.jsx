@@ -5,6 +5,7 @@ import { List,
         SimpleShowLayout, 
         RichTextField,
         ImageField,
+        FileField
         
     } from 'react-admin';
 
