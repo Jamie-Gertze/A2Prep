@@ -5,7 +5,9 @@ import { List,
         SimpleShowLayout, 
         RichTextField,
         ImageField,
-        FileField
+        FileField,
+        ReferenceField,
+        ImageInput
         
     } from 'react-admin';
 
@@ -26,7 +28,11 @@ export const usersList = () => (
 export const usersShow = () => (
     <Show>
         <SimpleShowLayout>
-            <ImageField source="avatar" label="Profile Picture" />
+          
+                 {/* <ImageField source="picture" />  */}
+            {/* <ImageInput source="avatar" >
+                <ImageField source="avatar"/>
+            </ImageInput> */}
             <TextField source="Role" label="Role" />
             <TextField source="name" label="Name" />
             <TextField source="email" label="Email" />
