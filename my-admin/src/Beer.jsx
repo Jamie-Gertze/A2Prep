@@ -1,4 +1,5 @@
-import { List, Datagrid, TextField, ShowButton, Show, SimpleShowLayout, ReferenceField } from "react-admin";
+import { List, Datagrid, TextField, ShowButton, Show, SimpleShowLayout, ReferenceField, ImageField  } from "react-admin";
+import { Stack, Box , Typography} from '@mui/material';
 
 export const BeerList = () => (
   <List>
@@ -9,34 +10,33 @@ export const BeerList = () => (
   </List>
 );
 
-// export const BeerShow = () => (
-//     <Show>
-//       <SimpleShowLayout>
-//         <TextField source="Name"  />
-//         <ReferenceManyField label="Store_price1" reference="stores" >
-//           <Datagrid>
-//             <TextField source="store" />
-//             <TextField source="price" />
-//           </Datagrid>
-//         </ReferenceManyField>
-//       </SimpleShowLayout>
-//     </Show>
-//   );
 
 export const BeerShow = () => (
     <Show>
         <SimpleShowLayout>
-            {/* <FileField source="Store"  src='checkers_VxgZnmj6ln.jpg'/>     */}
+            <ImageField source="image">
+            </ImageField>
             <TextField source="Name" label="Name" />
-            {/* <TextField source="Adress" label="Adress" /> */}
-            <ReferenceField source="Store_1" reference="Stores" label="Store 1" >   
-                <TextField source="Name" />
-            </ReferenceField>
-            <TextField source="Store_Price1" label="Store 1 Price" />
-            <TextField source="Store_2" label="Store 2" />
-            <TextField source="Store_Price_2" label="Store 2 Price" />
+            <TextField source="Volume" label="Volume" />
 
-    
-        </SimpleShowLayout>
-    </Show>
-    )
+<Box padding={2} display="flex" justifyContent="space-between">
+<Typography variant="subtitle1" style={{ width: '70%' }}>Store</Typography>
+<Typography variant="subtitle1" style={{ width: '165%' }}>Price</Typography>
+</Box>
+
+    <Box padding={2} display="flex" justifyContent="space-between">
+    <ReferenceField source="Store_1" reference="Stores" label="Store 1" >   
+                <TextField source="Name" style={{ width: '70%' }} />
+    </ReferenceField>
+    <TextField source="Store_Price1" style={{ width: '70%' }} />
+</Box>
+
+<Box padding={2} display="flex" justifyContent="space-between">
+    <ReferenceField source="Store_2" reference="Stores" label="Store 2" >   
+                <TextField source="Name" style={{ width: '70%' }}  />
+    </ReferenceField>    
+    <TextField source="Store_Price_2" style={{ width: '70%' }} />
+</Box>
+</SimpleShowLayout>
+</Show>
+)
