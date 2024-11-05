@@ -9,6 +9,7 @@ import { ApplicationCreate, ApplicationList, ApplicantsShow } from "./applicatio
 import CustomLoginPage from "./CustomLoginPage";
 import  ProfileCreate from "./ProfileCreate";
 import {Route, Routes} from 'react-router-dom' ;
+import { Dashboard } from "./dashboard";
 
 
 
@@ -19,6 +20,7 @@ const pbProvider = PocketBaseProvider("https://organic-rotary-phone-4j9pjg4vpw4c
 
 const App = () => (
   <Admin 
+  dashboard={Dashboard}
   dataProvider={pbProvider.dataProvider}
   authProvider={pbProvider.authProvider}
   loginPage={CustomLoginPage}
