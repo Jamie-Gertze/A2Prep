@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material';
 
 
 const ProfileCreate = () => (
-    <Create disableAuthentication>
+    <Create>
        <SimpleForm>
         <ImageInput source="avatar" label="Profile Picture" />
         <TextInput source="email" label="Email" />
