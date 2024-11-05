@@ -40,22 +40,22 @@ export const ApplicationCreate = () => (
                         { id: 'Mrs', name: 'Mrs' },
                         { id: 'Dr', name: 'Dr' },
                     ]} />
-                    <SelectInput source="gender" choices={[
+                    <SelectInput source="Gender" choices={[
                     { id: 'Male', name: 'Male' },
                     { id: 'Female', name: 'Female' },
                     ]} />
-                    <TextInput source="name" />
-                    <TextInput source="middle_name" />
-                    <TextInput source="surname" />
+                    <TextInput source="Name" />
+                    <TextInput source="Middle_Name" />
+                    <TextInput source="Surname" />
                 </Stack>
                 <Stack direction="row" gap={1}>
-                    <TextInput source="email" />
-                    <TextInput source="physical_address" />
+                    <TextInput source="Email" />
+                    <TextInput source="Physical_address" />
                     
                 </Stack>
                 <Stack direction="row" gap={1}>
-                    <DateInput source="date_of_birth" />
-                    <NumberInput source='identity_num'/>
+                    <DateInput source="Date_of_birth" />
+                    <NumberInput source='Identity_num'/>
                 </Stack>
             </TabbedForm.Tab>
         </TabbedForm>
@@ -87,12 +87,9 @@ export const ApplicantsShow = () => (
     <SimpleShowLayout>
       <TabbedShowLayout>
           <TabbedShowLayout.Tab label="Applicaton Staus">
-                <DateField label="Publication date" source="created_at" />
-                <TextField source="application_status" />
-                <TextField label="Student Details"source="id" />
-                <TextField label=""source="name"  />
-                <TextField label="" source="surname" />
-                <TextField source="email" />
+                <TextField label=""source="Name"  />
+                <TextField label="" source="Surname" />
+                <TextField source="Email" />
                 <TextField source='' />
            </TabbedShowLayout.Tab>
        </TabbedShowLayout>

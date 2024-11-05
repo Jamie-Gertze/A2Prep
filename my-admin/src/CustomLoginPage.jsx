@@ -62,7 +62,7 @@ const CustomLoginPage = () => {
                 </Button>
             </form>
             <Typography variant="body1" style={{ marginTop: '20px' }}>
-            Don't have an account? <CreateButton  resource="users" label="Create Profile" />
+            Don't have an account? <CreateButton  resource="users" reference= "ProfileCreate" label="Create Profile" />
             </Typography>
         </Box>
     );

@@ -6,12 +6,11 @@ import { Box, Typography } from '@mui/material';
 const ProfileCreate = () => (
     <Create>
        <SimpleForm>
-        <ImageInput source="avatar" label="Profile Picture" />
         <TextInput source="email" label="Email" />
         <TextInput source="name" label="Name" />
         <TextInput source="username" label="Username" />
         <TextInput source="passwordConfirm" type="password" label="Password" />
-        <TextInput source="role" label="Role" />
+        <TextInput source="Role" label="Role" />
 
 
        </SimpleForm>
@@ -27,7 +26,7 @@ const Empty = () => (
         <Typography variant="body1">
             Would you like to create one?
         </Typography>
-        <Link resource="users" label="Create Profile" /> 
+        <Link resource="users" label="Create Profile" reference= "ProfileCreate" /> 
     </Box>
 );
 
