@@ -11,7 +11,8 @@ import { List,
          SimpleForm, 
          ReferenceInput, 
          SelectInput, 
-         AutocompleteInput
+         AutocompleteInput,
+         Title
           } from "react-admin";
 import { Stack, Box , Typography} from '@mui/material';
 
@@ -72,4 +73,6 @@ export const BeerShow = () => (
 </SimpleShowLayout>
 </Show>
 )
+
+
 

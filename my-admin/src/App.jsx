@@ -10,7 +10,6 @@ import CustomLoginPage from "./CustomLoginPage";
 import  ProfileCreate from "./ProfileCreate";
 import {Route, Routes} from 'react-router-dom' ;
 import { Dashboard } from "./dashboard";
-
 import PersonIcon from '@mui/icons-material/Person';
 import StoreIcon from '@mui/icons-material/Store';
 import CategoryIcon from '@mui/icons-material/Category';
@@ -22,6 +21,7 @@ const pbProvider = PocketBaseProvider("https://organic-rotary-phone-4j9pjg4vpw4c
 
 const App = () => (
   <Admin 
+  
   dashboard={Dashboard}
   dataProvider={pbProvider.dataProvider}
   authProvider={pbProvider.authProvider}
