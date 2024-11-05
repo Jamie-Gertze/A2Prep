@@ -9,6 +9,7 @@ import { BrandyList, BrandyShow } from "./Brandy";
 
 const pbProvider = PocketBaseProvider("https://organic-rotary-phone-4j9pjg4vpw4cjqv6-8090.app.github.dev/");
 
+
 const App = () => (
   <Admin 
   dataProvider={pbProvider.dataProvider}

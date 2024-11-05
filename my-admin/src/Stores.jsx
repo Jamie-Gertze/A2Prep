@@ -12,7 +12,7 @@ import { List,
 export const StoresList = () => (
 <List>
     <Datagrid>
-        <TextField source="Name" label="Name" />
+        <TextField source="Store_Name" label="Name" />
         <TextField source="Adress" label="Adress" />
         <TextField source="Hours" label="Open Hours" />
 
@@ -24,7 +24,7 @@ export const StoresShow = () => (
 <Show>
     <SimpleShowLayout>
         <FileField source="Store"  src='checkers_VxgZnmj6ln.jpg'/>    
-        <TextField source="Name" label="Name" />
+        <TextField source="Store_Name" label="Name" />
         <TextField source="Adress" label="Adress" />
         <TextField source="Hours" label="Open Hours" />
 
