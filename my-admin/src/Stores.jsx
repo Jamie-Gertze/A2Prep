@@ -6,6 +6,9 @@ import { List,
     RichTextField,
     ImageField,
     FileField,
+    Edit,
+    TextInput,
+    SimpleForm
     
 } from 'react-admin';
 
@@ -23,7 +26,6 @@ export const StoresList = () => (
 export const StoresShow = () => (
 <Show>
     <SimpleShowLayout>
-        <FileField source="Store"  src='checkers_VxgZnmj6ln.jpg'/>    
         <TextField source="Store_Name" label="Name" />
         <TextField source="Adress" label="Adress" />
         <TextField source="Hours" label="Open Hours" />
@@ -31,3 +33,13 @@ export const StoresShow = () => (
     </SimpleShowLayout>
 </Show>
 )
+
+export const StoresEdit = () => (
+    <Edit>
+        <SimpleForm>
+            <TextInput source="Store_Name" label="Name" />
+            <TextInput source="Adress" label="Adress" />
+            <TextInput source="Hours" label="Open Hours" />
+        </SimpleForm>
+    </Edit>
+    )

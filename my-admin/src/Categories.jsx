@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 export const CategoriesList = () => (
     <List>
       <Datagrid>
-        <TextField source="Name" label="Categories" />
+        <TextField source="Type" label="Categories" />
         <Link to="/Beer">
           <button>View Beers</button>
         </Link>
